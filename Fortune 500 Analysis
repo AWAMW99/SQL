@@ -79,6 +79,7 @@ WHERE employees >=50000
 AND healthcare_benefits =0;
 
 --Showing the average number of employees where the employees have at least 10 days of paid time off by industry
-SELECT industry, AVG(employees)
+SELECT industry, AVG(employees) avg_employees
 FROM fortune_companies
-WHERE paid_time_off_days >=10;
+WHERE paid_time_off_days >=10
+GROUP BY industry;
